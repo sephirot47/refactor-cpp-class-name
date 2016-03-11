@@ -5,8 +5,7 @@ A tool to change cpp class name, and change the file names and includes too. Thi
    ./ref-cpp-class-name  old_classname  new_classname
   
 # Example
-    I am in the root folder of my project!
+   I am in the root folder of my project!
       ./ref-cpp-class-name  FooManager  FooMgr 
-    
-    Done.
+   Done.
       
