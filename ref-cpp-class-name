@@ -23,7 +23,7 @@ NEW_CLASSNAME=$2
 
 for f in $(find . | grep -E "${OLD_CLASSNAME}\.(h|cpp|c|hpp)")
 do
-	f=$(realpath $f)
+	f="$(cd $(dirname "$f") && pwd)/$(basename "$f")"
 	ext=$(echo $f | cut -d. -f2)
 	echo -e "Changing file name: ${OLD_CLASSNAME}.${ext} \t to \t ${NEW_CLASSNAME}.${ext}"
 	mv $f "$(dirname $f)/${NEW_CLASSNAME}.${ext}"
